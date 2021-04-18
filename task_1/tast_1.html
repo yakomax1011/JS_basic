@@ -1,0 +1,81 @@
+<meta charset="utf-8">
+
+
+<!-- 1. Задать температуру в градусах по Цельсию. Вывести в alert соответствующую температуру в градусах по Фаренгейту. 
+Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту, Tc – температура по Цельсию -->
+
+<script type="text/javascript">
+
+    var temp_Tc = +prompt("Введите температуру по Цельсию: ");
+    var temp_Tf = ((9 / 5) * temp_Tc + 32);
+    alert('Температура в градусах по Фаренгейту равна: ' + temp_Tf.toFixed(2));
+
+</script>
+
+
+<!-- 2. Работа с переменными. -->
+
+<script type="text/javascript">
+
+    var object_1 = NaN;
+    var object_2 = null;
+    var object_3 = false;
+    var object_4 = true;
+
+    if (object_1 == object_2) {
+        document.write(object_4)
+    } else {
+        document.write(object_3)
+    }
+
+</script>
+
+
+<!-- 3. Объявить две переменные: admin и name. Записать в name строку "Василий"; 
+    Скопировать значение из name в admin. Вывести admin (должно вывести «Василий»). -->
+
+<script type="text/javascript">
+
+    var admin = String;
+    var name = "Василий";
+    admin = name;
+    alert(admin);
+
+</script>
+
+<!-- 4. *Чему будет равно JS-выражение 1000 + "108"/ -->
+
+<script type="text/javascript">
+
+    var test = 1000 + "108"
+    alert('JS-выражение 1000 + "108" равно: ' + test);
+
+</script>
+
+
+<!-- 5. *Самостоятельно разобраться с атрибутами тега script (async и defer)/ -->
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Порядок</th>
+            <th><code>DOMContentLoaded</code></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>async</code></td>
+            <td><em>Порядок загрузки</em> (кто загрузится первым, тот и сработает).</td>
+            <td>Не имеет значения. Может загрузиться и выполниться до того, как страница полностью загрузится. Такое
+                случается, если скрипты маленькие или хранятся в кеше, а документ достаточно большой.</td>
+        </tr>
+        <tr>
+            <td><code>defer</code></td>
+            <td><em>Порядок документа</em> (как расположены в документе).</td>
+            <td>Выполняется после того, как документ загружен и обработан (ждёт), непосредственно перед
+                <code>DOMContentLoaded</code>.
+            </td>
+        </tr>
+    </tbody>
+</table>
